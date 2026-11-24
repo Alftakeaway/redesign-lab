@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redesign Lab — Prima e dopo: trascina la maniglia</title>
+<meta name="description" content="Demo interattiva before/after per web designer freelance. Tre casi di redesign, tre slider trascinabili: muovi la maniglia e vedi cosa cambia quando un sito smette di essere una vetrina e inizia a vendere.">
+<meta name="theme-color" content="#12100D">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Redesign Lab — Prima e dopo, interattivo">
+<meta property="og:description" content="Tre siti prima e dopo il mio intervento, in uno slider che puoi trascinare.">
+
+<!-- Favicon inline: nessun file esterno richiesto -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2312100D'/%3E%3Crect x='15' y='6' width='2' height='20' fill='%23E9B44C'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%23E9B44C' stroke-width='2'/%3E%3C/svg%3E">
+
+<!-- Tipografia: Fraunces (titoli) + Inter (testo). Fallback locali in CSS se si è offline. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/script.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Vai al contenuto</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="#top" aria-label="RedesignLab — torna all'inizio">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__name">Redesign<em>Lab</em></span>
+    </a>
+    <nav class="site-nav" aria-label="Navigazione principale">
+      <a href="#come-funziona">Come funziona</a>
+      <a href="#casi">I casi</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+    <a class="btn btn--sm btn--primary site-header__cta" href="#contatti">Parliamone</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="wrap hero__inner">
+      <p class="eyebrow">Demo interattiva &middot; Prima&nbsp;/&nbsp;Dopo</p>
+      <h1 class="hero__title">Prima.<br>Dopo.<br><em>Trascina la maniglia.</em></h1>
+      <p class="hero__lead">
+        Redesign Lab è la demo con cui mostro ai miei clienti cosa succede quando un sito
+        smette di essere una vetrina e diventa uno strumento di vendita.
+        Tre casi reali, tre slider, zero teoria.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#casi">Guarda i casi</a>
+        <a class="btn btn--ghost" href="#contatti">Vuoi un sito così?</a>
+      </div>
+      <ul class="hero__facts">
+        <li><strong>3</strong><span>casi, tre settori diversi</span></li>
+        <li><strong>100%</strong><span>mobile-first, dalla prima riga</span></li>
+        <li><strong>2&nbsp;sett.</strong><span>dal primo confronto alla consegna</span></li>
+      </ul>
+    </div>
+    <p class="hero__scroll" aria-hidden="true">Scorri &darr;</p>
+  </section>
+
+  <!-- ============ COME FUNZIONA ============ -->
+  <section class="section method" id="come-funziona">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">Il metodo</p>
+        <h2 class="section-head__title">Non ridisegno un sito:<br>ne ridisegno il lavoro.</h2>
+        <p class="section-head__lead">
+          Prima di aprire un file grafico chiedo una cosa sola: questo sito cosa deve fare
+          per te? Poi costruisco tutto attorno a quella risposta.
+        </p>
+      </header>
+      <ol class="method__grid">
+        <li class="method__step">
+          <span class="method__num" aria-hidden="true">01</span>
+          <h3>Ascolto</h3>
+          <p>Quanti coperti, quanti preventivi, quanti contatti. Se non misuriamo il prima,
+             il dopo non significa nulla.</p>
+        </li>
+        <li class="method__step">
+          <span class="method__num" aria-hidden="true">02</span>
+          <h3>Ridisegno</h3>
+          <p>Struttura, testi e gerarchia. Il design arriva dopo gli obiettivi, mai prima:
+             è quello che fa la differenza tra “bello” e “funziona”.</p>
+        </li>
+        <li class="method__step">
+          <span class="method__num" aria-hidden="true">03</span>
+          <h3>Consegno</h3>
+          <p>HTML e CSS veloci, leggibili, senza dipendenze e senza vincoli.
+             Il sito resta tuo, in ogni senso.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ CASI ============ -->
+  <section class="section cases" id="casi">
+    <div class="wrap">
+      <header class="section-head section-head--split">
+        <div>
+          <p class="eyebrow">I casi</p>
+          <h2 class="section-head__title">Tre prima / dopo.<br>Trascina tu.</h2>
+        </div>
+        <div class="section-head__side">
+          <p class="section-head__lead">
+            Ogni caso parte da un problema concreto e finisce con un numero.
+            Le immagini sono ricostruite in HTML e CSS: puoi toccarle, come il resto della pagina.
+          </p>
+          <button type="button" class="btn btn--ghost btn--sm" data-toggle-all aria-pressed="false">
+            Mostra tutte le spiegazioni
+          </button>
+        </div>
+      </header>
+
+      <!-- ---------- CASO 1 : RISTORANTE ---------- -->
+      <article class="case">
+        <header class="case__head">
+          <div class="case__title-col">
+            <span class="tag">Ristorazione</span>
+            <h3 class="case__title">Ristorante — da menu PDF a prenotazione online</h3>
+          </div>
+          <div class="case__text-col">
+            <p>
+              Il sito era fermo al 2011: sfondo giallo, menu in PDF da 4&nbsp;MB e nessun numero
+              di telefono in evidenza. Il 70% delle visite arrivava da smartphone e dopo sei
+              secondi non c'era più nessuno. Ho smontato tutto attorno a un'unica azione —
+              <em>prenotare</em> — con menu leggibile, orari chiari e un pulsante che si trova
+              anche con una sola mano.
+            </p>
+            <p><strong>Risultato:</strong> prenotazioni online triplicate nel primo mese,
+              con zero investimento in pubblicità.</p>
+          </div>
+        </header>
+
+        <!-- Slider: prima (sinistra) / dopo (destra) -->
+        <figure class="compare" data-compare style="--pos:50%">
+          <div class="compare__media">
+
+            <!-- PRIMA -->
+            <div class="mock mock--before" aria-hidden="true">
+              <div class="mock__bar">
+                <span class="mock__dots"><i></i><i></i><i></i></span>
+                <span class="mock__url">www.ristorante-da-mario.it/index.htm</span>
+              </div>
+              <div class="mock__view bv bv--1">
+                <div class="bv1-marquee"><span>★ BENVENUTI NEL SITO UFFICIALE ★ RISTORANTE DA MARIO ★ DAL 1972 ★</span></div>
+                <h4 class="bv1-title">~*~ RISTORANTE DA MARIO ~*~</h4>
+                <p class="bv1-sub">IL MEGLIO DELLA CUCINA TIPICA ITALIANA!!!</p>
+                <div class="bv1-row">
+                  <span class="bv1-btn">SCARICA IL MENU' (PDF - 4 MB)</span>
+                  <span class="bv1-link">Le nostre foto</span>
+                  <span class="bv1-link">Guestbook</span>
+                  <span class="bv1-link">Mappa</span>
+                </div>
+                <div class="bv1-cols">
+                  <div class="bv1-box">
+                    <p><em>Benvenuti nel nostro sito!!! Il nostro ristorante offre piatti della
+                      tradizione con materie prime selezionate, per un'esperienza indimenticabile…</em></p>
+                    <p class="bv1-blink">ATTENZIONE: NUOVO MENU' DISPONIBILE!!!</p>
+                  </div>
+                  <div class="bv1-img">[ qui va la foto ]</div>
+                </div>
+                <div class="bv1-foot">Visitatori n. 0001234 &nbsp;|&nbsp; Ultimo aggiornamento 12/03/2011 &nbsp;|&nbsp; Best viewed 800x600</div>
+              </div>
+            </div>
+
+            <!-- DOPO -->
+            <div class="mock mock--after" aria-hidden="true">
+              <div class="mock__bar">
+                <span class="mock__dots"><i></i><i></i><i></i></span>
+                <span class="mock__url">osteriamario.it</span>
+              </div>
+              <div class="mock__view av av--1">
+                <div class="av-nav">
+                  <span class="av-logo">Osteria Mario</span>
+                  <span class="av-links">Menu &middot; Storia &middot; Cantina</span>
+                  <span class="av-pill">Prenota</span>
+                </div>
+                <div class="av1-hero">
+                  <p class="av-eyebrow">Cucina sarda &middot; Alghero</p>
+                  <h4>Una tavola<br>che ricordi.</h4>
+                  <p class="av-p">Menu del giorno, vini del territorio, un tavolo pronto per te.</p>
+                  <span class="av-btn">Prenota un tavolo</span>
+                </div>
+                <div class="av1-cards">
+                  <span class="av1-card">Antipasti<small>7 piatti</small></span>
+                  <span class="av1-card">Primi<small>6 piatti</small></span>
+                  <span class="av1-card">Secondi<small>8 piatti</small></span>
+                </div>
+              </div>
+            </div>
+
+            <span class="compare__tag compare__tag--before">Prima</span>
+            <span class="compare__tag compare__tag--after">Dopo</span>
+          </div>
+
+          <div class="compare__ui">
+            <span class="compare__line" aria-hidden="true"></span>
+            <div class="compare__handle" role="slider" tabindex="0"
+                 aria-label="Confronto prima e dopo, caso ristorante"
+                 aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"
+                 aria-valuetext="50% prima, 50% dopo">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+                <path d="M9 6 4 12l5 6M15 6l5 6-5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+
+          <figcaption class="compare__hint">
+            Trascina la maniglia &mdash; oppure usa le frecce <kbd>&larr;</kbd> <kbd>&rarr;</kbd> quando ha il focus.
+          </figcaption>
+          <p class="sr-only">
+            A sinistra il vecchio sito del ristorante: sfondo giallo, testo a colori contrastanti,
+            menu in PDF, pulsanti anni 2000. A destra la versione ridisegnata: fondo scuro caldo,
+            titolo serif, tre voci di menu e un solo pulsante, “Prenota un tavolo”.
+          </p>
+        </figure>
+
+        <div class="case__foot">
+          <ul class="metrics">
+            <li><strong>4,8s &rarr; 0,9s</strong><span>tempo di caricamento</span></li>
+            <li><strong>&minus;41%</strong><span>frequenza di rimbalzo</span></li>
+            <li><strong>&times;3</strong><span>prenotazioni online</span></li>
+          </ul>
+          <div class="case__detail">
+            <button type="button" class="link-btn" data-toggle aria-expanded="false" aria-controls="note-1">
+              <span class="link-btn__icon" aria-hidden="true"></span>
+              <span data-toggle-label>Mostra cosa ho cambiato</span>
+            </button>
+            <div class="case__notes" id="note-1" hidden>
+              <ul>
+                <li>Menu PDF da 4&nbsp;MB convertito in pagine leggibili da smartphone.</li>
+                <li>Homepage ridotta a una sola azione primaria: <em>prenota</em>.</li>
+                <li>Numero di telefono cliccabile e orari sempre visibili, in testa e in coda.</li>
+                <li>Foto e colori riallineati al carattere reale della sala.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ---------- CASO 2 : STUDIO LEGALE ---------- -->
+      <article class="case">
+        <header class="case__head">
+          <div class="case__title-col">
+            <span class="tag">Servizi professionali</span>
+            <h3 class="case__title">Studio legale — da brochure statica a preventivo in 60 secondi</h3>
+          </div>
+          <div class="case__text-col">
+            <p>
+              Paragrafi infiniti, nessuna distinzione tra le aree di attività e un modulo
+              contatti nascosto in fondo alla pagina. Il sito diceva tutto e non faceva
+              capire nulla. Ho costruito una gerarchia: chi siete, cosa fate, come si inizia.
+              Testi scritti per essere letti in diagonale, tre aree con priorità chiara,
+              un contatto che richiede tre campi e nient'altro.
+            </p>
+            <p><strong>Risultato:</strong> richieste di consulenza qualificate raddoppiate
+              in tre mesi, con lo stesso traffico di prima.</p>
+          </div>
+        </header>
+
+        <figure class="compare" data-compare style="--pos:50%">
+          <div class="compare__media">
+
+            <!-- PRIMA -->
+            <div class="mock mock--before" aria-hidden="true">
+              <div class="mock__bar">
+                <span class="mock__dots"><i></i><i></i><i></i></span>
+                <span class="mock__url">www.studiolegalerossi.it/index.html</span>
+              </div>
+              <div class="mock__view bv bv--2">
+                <div class="bv2-head">
+                  <strong>STUDIO LEGALE ROSSI &amp; ASSOCIATI</strong>
+                  <span>Avvocati dal 1998</span>
+                </div>
+                <div class="bv2-body">
+                  <div class="bv2-main">
+                    <h4 class="bv2-title">Benvenuti nel nostro sito web</h4>
+                    <p>Lo Studio Legale Rossi &amp; Associati opera da oltre vent'anni nel settore
+                      del diritto civile, commerciale, tributario e del lavoro, offrendo assistenza
+                      giudiziale e stragiudiziale a imprese e privati su tutto il territorio nazionale…</p>
+                    <p>La professionalità e l'attenzione al cliente rappresentano da sempre il
+                      nostro punto di forza, grazie a un team di professionisti qualificati…</p>
+                    <span class="bv-link">Leggi tutto</span>
+                  </div>
+                  <div class="bv2-side">
+                    <div class="bv2-menu">HOME<br>CHI SIAMO<br>ATTIVITÀ<br>IL TEAM<br>CONTATTI</div>
+                    <div class="bv2-img">[immagine]</div>
+                  </div>
+                </div>
+                <div class="bv2-foot">Copyright © 2009 Studio Legale Rossi &amp; Associati &nbsp;-&nbsp; P.IVA 01234567890 &nbsp;-&nbsp; Tutti i diritti riservati</div>
+              </div>
+            </div>
+
+            <!-- DOPO -->
+            <div class="mock mock--after" aria-hidden="true">
+              <div class="mock__bar">
+                <span class="mock__dots"><i></i><i></i><i></i></span>
+                <span class="mock__url">studiorossi.it</span>
+              </div>
+              <div class="mock__view av av--2">
+                <div class="av-nav av-nav--dark">
+                  <span class="av-logo">Studio Rossi</span>
+                  <span class="av-links">Aree &middot; Metodo &middot; Contatti</span>
+                  <span class="av-pill av-pill--dark">Primo parere</span>
+                </div>
+                <div class="av2-hero">
+                  <p class="av-eyebrow">Civile &middot; Tributario &middot; Lavoro</p>
+                  <h4>Consulenza chiara,<br>quando conta.</h4>
+                  <p class="av-p">Un primo parere in 48 ore. Tre aree, un referente, costi dichiarati prima di iniziare.</p>
+                  <span class="av-btn av-btn--dark">Richiedi una consulenza</span>
+                </div>
+                <div class="av2-grid">
+                  <span class="av2-card">Contenzioso<small>Imprese e privati</small></span>
+                  <span class="av2-card">Fiscalità<small>Consulenza e difesa</small></span>
+                  <span class="av2-card">Lavoro<small>Aziende e dipendenti</small></span>
+                </div>
+              </div>
+            </div>
+
+            <span class="compare__tag compare__tag--before">Prima</span>
+            <span class="compare__tag compare__tag--after">Dopo</span>
+          </div>
+
+          <div class="compare__ui">
+            <span class="compare__line" aria-hidden="true"></span>
+            <div class="compare__handle" role="slider" tabindex="0"
+                 aria-label="Confronto prima e dopo, caso studio legale"
+                 aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"
+                 aria-valuetext="50% prima, 50% dopo">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+                <path d="M9 6 4 12l5 6M15 6l5 6-5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+
+          <figcaption class="compare__hint">
+            Trascina la maniglia &mdash; oppure usa le frecce <kbd>&larr;</kbd> <kbd>&rarr;</kbd> quando ha il focus.
+          </figcaption>
+          <p class="sr-only">
+            A sinistra il vecchio sito dello studio: header blu, testo fittissimo, menu laterale
+            con elenco puntato, riquadro grigio con scritto “immagine”. A destra la versione
+            ridisegnata: fondo avorio, titolo serif, tre aree di attività in card e un pulsante
+            “Richiedi una consulenza”.
+          </p>
+        </figure>
+
+        <div class="case__foot">
+          <ul class="metrics">
+            <li><strong>&times;2</strong><span>richieste qualificate</span></li>
+            <li><strong>+58%</strong><span>tempo medio sul sito</span></li>
+            <li><strong>9 &rarr; 3</strong><span>campi nel modulo</span></li>
+          </ul>
+          <div class="case__detail">
+            <button type="button" class="link-btn" data-toggle aria-expanded="false" aria-controls="note-2">
+              <span class="link-btn__icon" aria-hidden="true"></span>
+              <span data-toggle-label>Mostra cosa ho cambiato</span>
+            </button>
+            <div class="case__notes" id="note-2" hidden>
+              <ul>
+                <li>Testi riscritti per la lettura in diagonale: titoli che dicono già tutto.</li>
+                <li>Le tre aree di attività hanno ora una priorità visiva e una pagina ciascuna.</li>
+                <li>Modulo di contatto ridotto a tre campi, con messaggio di conferma immediato.</li>
+                <li>Aggiunta prova sociale: anni di attività, casi seguiti, referente nominato.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ---------- CASO 3 : B&B ---------- -->
+      <article class="case">
+        <header class="case__head">
+          <div class="case__title-col">
+            <span class="tag">Ospitalità</span>
+            <h3 class="case__title">B&amp;B — da galleria foto a prenotazione diretta</h3>
+          </div>
+          <div class="case__text-col">
+            <p>
+              Un template comprato nel 2014: banner a tutta larghezza, sei foto tutte diverse
+              fra loro e le disponibilità richieste via email, con due giorni di attesa per
+              una risposta. Nel frattempo gli ospiti prenotavano dai portali, che si tengono
+              il 18% di commissione. Ho messo le camere al centro — foto coerenti, prezzi
+              visibili, date sempre aggiornate — e la prenotazione è tornata in casa.
+            </p>
+            <p><strong>Risultato:</strong> due prenotazioni su tre arrivano ora dirette,
+              senza commissioni e senza intermediari.</p>
+          </div>
+        </header>
+
+        <figure class="compare" data-compare style="--pos:50%">
+          <div class="compare__media">
+
+            <!-- PRIMA -->
+            <div class="mock mock--before" aria-hidden="true">
+              <div class="mock__bar">
+                <span class="mock__dots"><i></i><i></i><i></i></span>
+                <span class="mock__url">www.larosadeiventi-bedandbreakfast.com/home.html</span>
+              </div>
+              <div class="mock__view bv bv--3">
+                <div class="bv3-banner">~ B&amp;B LA ROSA DEI VENTI ~<small>La vostra vacanza in Sardegna!!!</small></div>
+                <div class="bv3-row">
+                  <span class="bv3-img"></span>
+                  <span class="bv3-img bv3-img--b"></span>
+                  <span class="bv3-img bv3-img--c"></span>
+                </div>
+                <div class="bv3-cols">
+                  <div class="bv3-menu">
+                    <span class="bv-link">Home</span>
+                    <span class="bv-link">Le camere</span>
+                    <span class="bv-link">Dove siamo</span>
+                    <span class="bv-link">Offerte</span>
+                    <span class="bv-link">Contatti</span>
+                  </div>
+                  <div class="bv3-text">
+                    <p>Il nostro B&amp;B è situato a pochi passi dal mare e offre camere
+                      arredate con cura, colazione continentale e parcheggio gratuito…</p>
+                    <table class="bv3-table">
+                      <tr><td>Camera doppia</td><td>€ 45,00</td></tr>
+                      <tr><td>Camera tripla</td><td>€ 60,00</td></tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="bv3-cta">BOOK NOW!!!</div>
+                <div class="bv3-foot">Seguici su Facebook &nbsp;|&nbsp; Sito realizzato con un generatore di siti web</div>
+              </div>
+            </div>
+
+            <!-- DOPO -->
+            <div class="mock mock--after" aria-hidden="true">
+              <div class="mock__bar">
+                <span class="mock__dots"><i></i><i></i><i></i></span>
+                <span class="mock__url">larosadeiventi.it</span>
+              </div>
+              <div class="mock__view av av--3">
+                <div class="av-nav av-nav--light">
+                  <span class="av-logo">La Rosa dei Venti</span>
+                  <span class="av-links">Camere &middot; Terrazza &middot; Dintorni</span>
+                  <span class="av-pill av-pill--light">Disponibilità</span>
+                </div>
+                <div class="av3-hero">
+                  <p class="av-eyebrow">Alghero &middot; vista mare</p>
+                  <h4>Dormire davanti<br>all'acqua.</h4>
+                  <p class="av-p">Sei camere, colazione in terrazza, prenotazione diretta.</p>
+                </div>
+                <div class="av3-booking">
+                  <span>Arrivo<small>12 lug</small></span>
+                  <span>Partenza<small>15 lug</small></span>
+                  <span>Ospiti<small>2</small></span>
+                  <span class="av-btn av-btn--sm">Verifica</span>
+                </div>
+                <div class="av3-rooms">
+                  <span class="av3-room"><i></i>Camera del faro<small>da &euro;95</small></span>
+                  <span class="av3-room"><i></i>Camera della sabbia<small>da &euro;110</small></span>
+                  <span class="av3-room"><i></i>Suite maestrale<small>da &euro;140</small></span>
+                </div>
+              </div>
+            </div>
+
+            <span class="compare__tag compare__tag--before">Prima</span>
+            <span class="compare__tag compare__tag--after">Dopo</span>
+          </div>
+
+          <div class="compare__ui">
+            <span class="compare__line" aria-hidden="true"></span>
+            <div class="compare__handle" role="slider" tabindex="0"
+                 aria-label="Confronto prima e dopo, caso bed and breakfast"
+                 aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"
+                 aria-valuetext="50% prima, 50% dopo">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+                <path d="M9 6 4 12l5 6M15 6l5 6-5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+
+          <figcaption class="compare__hint">
+            Trascina la maniglia &mdash; oppure usa le frecce <kbd>&larr;</kbd> <kbd>&rarr;</kbd> quando ha il focus.
+          </figcaption>
+          <p class="sr-only">
+            A sinistra il vecchio sito del B&amp;B: banner viola-rosso con scritte decorative,
+            tre foto in fila con cornici bianche, menu laterale con link blu sottolineati,
+            tabella prezzi con bordi e un pulsante “BOOK NOW!!!”. A destra la versione
+            ridisegnata: palette blu-mare, titolo serif, striscia per verificare le date
+            e tre camere con prezzo indicativo.
+          </p>
+        </figure>
+
+        <div class="case__foot">
+          <ul class="metrics">
+            <li><strong>&minus;18%</strong><span>commissioni ai portali</span></li>
+            <li><strong>+64%</strong><span>prenotazioni dirette</span></li>
+            <li><strong>2gg &rarr; 0</strong><span>tempo di risposta</span></li>
+          </ul>
+          <div class="case__detail">
+            <button type="button" class="link-btn" data-toggle aria-expanded="false" aria-controls="note-3">
+              <span class="link-btn__icon" aria-hidden="true"></span>
+              <span data-toggle-label>Mostra cosa ho cambiato</span>
+            </button>
+            <div class="case__notes" id="note-3" hidden>
+              <ul>
+                <li>Sei camere con scheda uniforme: foto, metratura, letto, prezzo da.</li>
+                <li>Verifica disponibilità in prima pagina, sopra la piega.</li>
+                <li>Prezzi, condizioni di cancellazione e colazione dichiarati senza nascondigli.</li>
+                <li>Recensioni degli ospiti usate come prova sociale, non come decorazione.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ CONTATTI ============ -->
+  <section class="section contact" id="contatti">
+    <div class="wrap contact__inner">
+      <header class="section-head">
+        <p class="eyebrow eyebrow--ink">Lavoriamo insieme</p>
+        <h2 class="section-head__title">Vuoi un sito così?<br>Parliamone.</h2>
+        <p class="section-head__lead">
+          Scrivimi due righe sul tuo progetto. Ti rispondo entro 24 ore con una prima
+          valutazione gratuita &mdash; anche se poi decidiamo di non lavorare insieme.
+        </p>
+      </header>
+
+      <form class="form" id="contact-form" data-mailto="alfredoforte.web@gmail.com" action="mailto:alfredoforte.web@gmail.com" method="post" enctype="text/plain">
+        <div class="form__row">
+          <div class="field">
+            <label for="nome">Nome e cognome</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required placeholder="Mario Rossi">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="mario@esempio.it">
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="field">
+            <label for="sito">Sito attuale <span class="field__opt">(facoltativo)</span></label>
+            <input type="url" id="sito" name="sito" inputmode="url" placeholder="https://">
+          </div>
+          <div class="field">
+            <label for="settore">Di cosa si tratta</label>
+            <select id="settore" name="settore">
+              <option value="Ristorazione">Ristorazione</option>
+              <option value="Ospitalità">Ospitalità</option>
+              <option value="Servizi professionali">Servizi professionali</option>
+              <option value="Commercio">Commercio</option>
+              <option value="Altro">Altro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="messaggio">Il progetto, in breve</label>
+          <textarea id="messaggio" name="messaggio" rows="5" required placeholder="Cosa fa il tuo business, cosa non funziona oggi, cosa vorresti ottenere."></textarea>
+        </div>
+
+        <div class="field field--check">
+          <input type="checkbox" id="privacy" name="privacy" required>
+          <label for="privacy">Acconsento all'uso di questi dati solo per ricevere una risposta. Nessuna newsletter, nessun tracciamento.</label>
+        </div>
+
+        <div class="form__foot">
+          <button type="submit" class="btn btn--ink">Invia la richiesta</button>
+          <p class="form__note">
+            Il modulo apre il tuo programma di posta con il messaggio già compilato:
+            nessun dato viene salvato o inviato a terzi.<br>
+            Oppure scrivimi direttamente a
+            <a href="mailto:alfredoforte.web@gmail.com">alfredoforte.web@gmail.com</a>.
+          </p>
+        </div>
+        <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p class="site-footer__brand"><span class="brand__mark" aria-hidden="true"></span> Redesign<em>Lab</em></p>
+    <p class="site-footer__note">
+      Demo interattiva &middot; HTML, CSS e JavaScript scritti a mano &middot;
+      Nessun framework, nessun cookie, nessun tracciamento.
+    </p>
+    <p class="site-footer__legal">&copy; <span data-year>2026</span> &middot; <a href="mailto:alfredoforte.web@gmail.com">alfredoforte.web@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
