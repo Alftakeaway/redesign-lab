@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Demo interattiva before/after — niente contenuti riservati.
+Sitemap: https://redesign-lab-demo.vercel.app/sitemap.xml
