@@ -1,5 +1,7 @@
 # Redesign Lab — demo interattiva before/after
 
+**Live**: https://redesign-lab-demo.vercel.app · **Repo**: https://github.com/Alftakeaway/redesign-lab
+
 Demo di vendita per web designer freelance: una pagina con **tre casi prima/dopo**,
 ognuno con uno slider trascinabile (mouse, touch, tastiera), la spiegazione di cosa
 non funzionava e i risultati ottenuti. Chiude con un modulo di contatto via `mailto:`
